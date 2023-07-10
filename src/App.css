@@ -1,38 +1,101 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin-top: 5em;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  border-bottom-right-radius: 100px;
+  padding: 2rem 1.6rem;
+}
+.user-data {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+input {
+  font-size: 32px;
+  border: 1px solid hsl(0, 0%, 86%);
+}
+input::placeholder {
+  font-size: 26px;
+  font-weight: bold;
+}
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.no-arrows {
+  -moz-appearance: textfield;
+  font-size: 32px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input-stn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 5rem;
+}
+.input-stn > label {
+  text-transform: capitalize;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.input-stn input {
+  width: 100%;
+  max-width: 5rem;
+}
+.input-stn div {
+  font-size: 0.6rem;
+}
+.input-error {
+  outline: 2px solid red;
+}
+
+.saperator {
+  position: relative;
+  margin-top: 2rem;
+}
+
+hr {
+  border: 1px sold hsl(0, 0%, 86%);
+}
+
+.arrow {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.res-color,
+.dash {
+  color: hsl(259, 100%, 65%);
+}
+
+.results {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+}
+
+@media only screen and (max-width: 375px) {
+  .arrow {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
-  to {
-    transform: rotate(360deg);
+  .results {
+    margin-top: 5rem;
   }
 }
